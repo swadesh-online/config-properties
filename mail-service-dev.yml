@@ -1,0 +1,55 @@
+spring :  
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: mindfire
+    url: jdbc:mysql://localhost:3306/onboarddb
+    username: onboard
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+#Tenant : Mindfire Solutions Ltd. 
+
+spring:
+  config:
+    activate:
+      on-profile: mindfire
+company-name: Mindfire Solutions Ltd. 
+year: 2022
+logo-url: https://on-board.s3.eu-central-1.amazonaws.com/static/mfs-logo.png
+links:
+  instagram: /mindfiresolutions
+  twitter: /mindfiresolutions
+  facebook: /mindfiresolutions
+  linkedin: /mindfiresolutions
+  wordpress: /mindfiresolutions
+signature: With Regards, <br> HR Department <br> Mindfire Solutions Ltd. 
+mail:
+  from: hr@mindfire.com
+  replyTo: no-reply@mindfire.com
+  cc: cc1@mindfire.com , cc2@mindfire.com , cc3@mindfire.com
+  bcc: bcc1@mindfire.com , bcc2@mindfire.com
+
+---
+
+#Tenant : Software Solutions Ltd. 
+spring:
+  config:
+    activate:
+      on-profile: software
+company-name: Software Solutions Ltd. 
+year: 2021
+logo-url: https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg
+links:
+  instagram: /softsoln
+  twitter: /softsoln
+  facebook: /softsoln
+  linkedin: /softsoln
+  wordpress: /softsoln
+signature: With Regards, <br> HR Department <br>softsoln Ltd.  
+mail:
+  from: hr@software.com
+  replyTo: no-reply@software.com
+  cc: cc1@software.com , cc2@software.com , cc3@software.com
+  bcc: bcc1@soft.com , bcc2@soft.com

@@ -1,0 +1,28 @@
+spring :  
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: mindfire
+    url: jdbc:mysql://localhost:3306/onboarddb
+    username: onboard
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+password :
+  temporary-password : 
+    capital-case-letters : 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    lower-case-letters : 'abcdefghijklmnopqrstuvwxyz'
+    special-characters : '!@#$'
+    numbers : '1234567890'
+    validity : 5 #in minutes
+  password-constraint : # for eg. minimum uppercase required = 1 
+    uppercase : 1 
+    lowercase : 1
+    digit : 1
+    special-character : 1
+    length : 8
+jwt:
+  secret: mindfire
+  token-validity : 30 #in minutes 
+    
